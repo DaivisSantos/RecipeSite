@@ -1,26 +1,45 @@
 .barra-pesquisa {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 10px;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
 
-  input[type="text"] {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 5px;
+  input {
+    width: calc(100% - 120px);
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
   }
 
   button {
-    border: none;
-    outline: none;
-    background-color: #e17b0d;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:active {
+      background-color: #003d7a;
+    }
   }
 }
+

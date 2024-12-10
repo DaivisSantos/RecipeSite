@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./cabecalho.scss";
 import { Link } from "react-router-dom";
 import BarraPesquisa from "../BarraPesquisa";
+import Logo from "../../assets/Logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +13,14 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">LOGO</div>
-      <BarraPesquisa />
+      <img src={Logo} className="logo" alt="Logo"/>
+      
       <button className={`menu-toggle ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <BarraPesquisa />
       <nav className={`nav-buttons ${isOpen ? "open" : ""}`}>
         <ul>
           <Link to="/">
